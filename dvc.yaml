@@ -3,7 +3,7 @@ stages:
     cmd: python src/data/split_data.py
     deps:
       - src/data/split_data.py
-      - data/raw/raw.csv
+      - data/raw_data/raw.csv
     outs:
       - data/processed/X_train.csv
       - data/processed/X_test.csv
