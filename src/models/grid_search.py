@@ -7,7 +7,7 @@ X_train = pd.read_csv("data/processed_data/X_train_scaled.csv")
 y_train = pd.read_csv("data/processed_data/y_train.csv").squeeze()
 
 param_grid = {
-    "n_estimators": [50, 100],
+    "n_estimators": [50, 200],
     "max_depth": [None, 5, 10],
     "min_samples_split": [2, 5]
 }
