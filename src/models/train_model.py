@@ -2,8 +2,8 @@ import pandas as pd
 import pickle
 from sklearn.ensemble import RandomForestRegressor
 
-X_train = pd.read_csv("data/processed/X_train_scaled.csv")
-y_train = pd.read_csv("data/processed/y_train.csv").squeeze()
+X_train = pd.read_csv("data/processed_data/X_train_scaled.csv")
+y_train = pd.read_csv("data/processed_data/y_train.csv").squeeze()
 
 with open("models/best_params.pkl", "rb") as f:
     best_params = pickle.load(f)
