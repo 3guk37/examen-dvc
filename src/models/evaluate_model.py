@@ -3,15 +3,15 @@ import pickle
 import json
 from sklearn.metrics import mean_squared_error, r2_score
 
-X_test = pd.read_csv("data/processed/X_test_scaled.csv")
-y_test = pd.read_csv("data/processed/y_test.csv").squeeze()
+X_test = pd.read_csv("data/processed_data/X_test_scaled.csv")
+y_test = pd.read_csv("data/processed_data/y_test.csv").squeeze()
 
 with open("models/model.pkl", "rb") as f:
     model = pickle.load(f)
 
 y_pred = model.predict(X_test)
 
-pd.DataFrame({"y_test": y_test.values, "y_pred": y_pred}).to_csv("data/processed/predictions.csv", index=False)
+pd.DataFrame({"y_test": y_test.values, "y_pred": y_pred}).to_csv("data/processed_data/predictions.csv", index=False)
 
 scores = {
     "MSE": mean_squared_error(y_test, y_pred),
