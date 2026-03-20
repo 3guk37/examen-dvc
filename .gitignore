@@ -1,2 +1,17 @@
-/venv
-/clean_data.csv
+# Python & uv
+__pycache__/
+*.pyc
+.env
+.uv/
+venv/
+.venv/
+uv.lock
+
+# DVC
+.dvc/cache
+.dvc/tmp
+.dvc/config.local
+
+data/raw/raw.csv
+data/processed/
+models/*.pkl
